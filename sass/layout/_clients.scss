@@ -1,0 +1,41 @@
+.clients {
+  display: flex;
+  flex-wrap: wrap;
+}
+.clients__link {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--icons-color);
+  color: var(--icons-color);
+  /* width: 170px; */
+  height: 92px;
+  border-radius: 4px;
+  transition: color 250ms var(--cubic), border 250ms var(--cubic);
+  &:hover,
+  &:focus {
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+  }
+}
+
+.clients__icon {
+  display: block;
+  fill: currentColor;
+}
+
+.clients__item {
+  @media screen and (min-width: 480px) {
+    width: calc((100% - 60px) / 2);
+    margin: 15px;
+  }
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 90px) / 3);
+    margin: 15px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 180px) / 6);
+    margin: 15px;
+  }
+}
