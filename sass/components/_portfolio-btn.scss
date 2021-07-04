@@ -1,7 +1,16 @@
 .portfolio-buttons {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  @media screen and (min-width: 480px) {
+    margin-bottom: 40px;
+  }
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 768px) {
+    margin-bottom: 50px;
+  }
 }
 
 .portfolio-buttons__button {
@@ -29,6 +38,11 @@
   background-color: var(--accent-color);
   color: var(--primary-white-color);
 }
-.portfolio-buttons__item:not(:last-child) {
-  margin-right: 8px;
+.portfolio-buttons__item {
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+  &:first-child {
+    margin-bottom: 15px;
+  }
 }
