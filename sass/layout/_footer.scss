@@ -87,7 +87,11 @@
   }
 }
 .form-subscribe__mail {
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: 479px) {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  @media screen and (min-width: 480px) and (max-width: 1199px) {
     margin-bottom: 20px;
     width: 450px;
   }
