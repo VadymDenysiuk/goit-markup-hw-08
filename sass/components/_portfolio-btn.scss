@@ -1,7 +1,7 @@
 .portfolio-buttons {
   display: flex;
   flex-wrap: wrap;
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: 320px) {
     margin-bottom: 40px;
   }
   @media screen and (min-width: 768px) {
@@ -14,6 +14,9 @@
 }
 
 .portfolio-buttons__button {
+  @media screen and (min-width: 320px) {
+    padding: 6px 22px;
+  }
   padding: 6px 22px;
   transition: box-shadow 250ms var(--cubic), background-color 250ms var(--cubic), color 250ms var(--cubic);
   text-align: center;
@@ -42,7 +45,7 @@
   &:not(:last-child) {
     margin-right: 8px;
   }
-  &:first-child {
+  &:nth-child(-n + 3) {
     margin-bottom: 15px;
   }
 }

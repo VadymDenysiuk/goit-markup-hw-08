@@ -146,14 +146,18 @@
   }
   margin: 0;
   padding: 0;
+  color: var(--title-text-color);
   border: none;
   background-color: transparent;
+  transition: color 250ms var(--cubic);
   &:hover,
   &:focus {
     color: var(--accent-color);
   }
 }
-
+.menu-toggle__icon {
+  fill: currentColor;
+}
 .menu-container {
   position: fixed;
   top: 0;
