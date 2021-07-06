@@ -11,16 +11,16 @@
   </head>
   <body>
     <!--Шапка сайта-->
-    <!-- <header class="page-header">
+    <header class="page-header">
       <div class="container page-header__container">
+        <a href="./index.html" class="logo page-header__logo">Web<span class="logo--black">Studio</span></a>
         <nav class="nav">
-          <a href="./index.html" class="logo page-header__logo">Web<span class="logo--black">Studio</span></a>
           <ul class="site-nav">
             <li class="site-nav__item">
-              <a href="./index.html" class="site-nav__link">Студия</a>
+              <a href="./index.html" class="site-nav__link site-nav__link--active">Студия</a>
             </li>
             <li class="site-nav__item">
-              <a href="./portfolio.html" class="site-nav__link site-nav__link--active">Портфолио</a>
+              <a href="./portfolio.html" class="site-nav__link">Портфолио</a>
             </li>
             <li class="site-nav__item">
               <a href="" class="site-nav__link">Контакты</a>
@@ -45,8 +45,14 @@
             </a>
           </li>
         </ul>
+        <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu" type="button">
+          <svg width="40" height="40" aria-label="переключатель мобильного меню">
+            <use class="icon-menu" href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
       </div>
-    </header> -->
+    </header>
+    <main>
     <main>
       <section class="section">
         <div class="container">
@@ -275,52 +281,53 @@
     <!--Подвал-->
     <footer class="footer">
       <div class="container footer__thumb">
-        <div class="addres-thumb">
-          <a href="./index.html" class="logo">Web<span class="logo--white">Studio</span></a>
-          <address>
-            <ul class="address">
-              <li class="address__item address__item--white-color">г. Киев, пр-т Леси Украинки, 26</li>
-              <li class="address__item"><a href="mailto:info@example.com" class="address__link">info@example.com</a></li>
-              <li class="address__item"><a href="tel:+380991111111" class="address__link">+38 099 111 11 11</a></li>
+        <div class="footer-tab">
+          <div class="addres-thumb">
+            <a href="./index.html" class="logo">Web<span class="logo--white">Studio</span></a>
+            <address>
+              <ul class="address">
+                <li class="address__item address__item--white-color">г. Киев, пр-т Леси Украинки, 26</li>
+                <li class="address__item"><a href="mailto:info@example.com" class="address__link">info@example.com</a></li>
+                <li class="address__item"><a href="tel:+380991111111" class="address__link">+38 099 111 11 11</a></li>
+              </ul>
+            </address>
+          </div>
+          <div class="networks-thumb">
+            <p class="footer__text">Присоединяйтесь</p>
+            <ul class="networks">
+              <li class="networks__item">
+                <a href="" class="networks__link networks__link--white-color"
+                  ><svg class="networks__icon">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="networks__item">
+                <a href="" class="networks__link networks__link--white-color"
+                  ><svg class="networks__icon">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="networks__item">
+                <a href="" class="networks__link networks__link--white-color"
+                  ><svg class="networks__icon">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="networks__item">
+                <a href="" class="networks__link networks__link--white-color"
+                  ><svg class="networks__icon">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
             </ul>
-          </address>
+          </div>
         </div>
-        <div class="networks-thumb">
-          <p class="footer__text">Присоединяйтесь</p>
-          <ul class="networks">
-            <li class="networks__item">
-              <a href="" class="networks__link networks__link--white-color"
-                ><svg class="networks__icon">
-                  <use href="./images/icons.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="networks__item">
-              <a href="" class="networks__link networks__link--white-color"
-                ><svg class="networks__icon">
-                  <use href="./images/icons.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="networks__item">
-              <a href="" class="networks__link networks__link--white-color"
-                ><svg class="networks__icon">
-                  <use href="./images/icons.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="networks__item">
-              <a href="" class="networks__link networks__link--white-color"
-                ><svg class="networks__icon">
-                  <use href="./images/icons.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-
         <div class="form-subscribe">
-          <form>
+          <form class="form-subscribe__form">
             <p class="footer__text">Подпишитесь на рассылку</p>
             <div class="form-subscribe__thumb">
               <input class="form-subscribe__mail" placeholder="E-mail" type="email" name="email" />
@@ -336,5 +343,55 @@
         </div>
       </div>
     </footer>
+
+    <!-- Мобильное меню -->
+
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-close menu-toggle js-close-menu" type="button">
+        <svg width="40" height="40">
+          <use class="icon-cross" href="./images/icons.svg#icon-cross"></use>
+        </svg>
+      </button>
+      <div class="mobile-header-cont">
+        <nav class="mobile-nav">
+          <ul class="site-nav">
+            <li class="site-nav__item">
+              <a href="./index.html" class="site-nav__link site-nav__link--active">Студия</a>
+            </li>
+            <li class="site-nav__item">
+              <a href="./portfolio.html" class="site-nav__link">Портфолио</a>
+            </li>
+            <li class="site-nav__item">
+              <a href="" class="site-nav__link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="mobile-contacts-cont">
+          <ul class="mobile-contacts">
+            <li class="contacts__item">
+              <a href="tel:+380961111111" class="contacts__link contacts__link--bigger"> +38 096 111 11 11 </a>
+            </li>
+            <li class="contacts__item">
+              <a href="mailto:info@devstudio.com" class="contacts__link"> info@devstudio.com </a>
+            </li>
+          </ul>
+          <ul class="mobile-networks">
+            <li class="mobile-networks__item"><a class="mobile-networks__link" href="">Instagram</a></li>
+            <li class="mobile-networks__item"><a class="mobile-networks__link" href="">Twitter</a></li>
+            <li class="mobile-networks__item"><a class="mobile-networks__link" href="">Facebook</a></li>
+            <li class="mobile-networks__item"><a class="mobile-networks__link" href="">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>
