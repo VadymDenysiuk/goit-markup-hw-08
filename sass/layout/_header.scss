@@ -11,25 +11,44 @@
 .page-header__container {
   display: flex;
   align-items: center;
+  @media screen and (max-width: 767px) {
+    justify-content: space-between;
+  }
 }
 
 .site-nav {
-  display: flex;
-  margin-left: 93px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin-left: 88px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 93px;
+  }
 }
 .site-nav__item:not(:last-child) {
   margin-right: 50px;
 }
 .nav {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
   display: flex;
   align-items: center;
 }
 
 .contacts {
-  display: flex;
-  margin-left: auto;
-  justify-content: center;
-  align-items: center;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  @media screen and (max-width: 1199px) {
+    margin-left: auto;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    margin-left: auto;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .contacts__icon {
   fill: currentColor;
@@ -37,18 +56,32 @@
 }
 
 .contacts__item:not(:last-child) {
-  margin-right: 50px;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-bottom: 10px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 50px;
+  }
 }
 
 .site-nav__link {
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  @media screen and (max-width: 767px) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-size: 40px;
+    line-height: 1.175;
+  }
+  @media screen and (min-width: 768px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    line-height: 1.14;
+  }
   align-items: center;
   color: var(--title-text-color);
   letter-spacing: 0.02em;
   font-weight: 500;
-  line-height: 1.14;
+
   transition: color 250ms var(--cubic);
 
   &:hover,
@@ -59,13 +92,26 @@
 
 .contacts__link {
   display: flex;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  @media screen and (max-width: 767px) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-size: 24px;
+    line-height: 1.17;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 12px;
+    line-height: 1.17;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    line-height: 1.14;
+  }
   align-items: center;
   color: var(--primary-text-color);
   letter-spacing: 0.02em;
   font-weight: 500;
-  line-height: 1.14;
+
   transition: color 250ms var(--cubic);
 
   &:hover,
@@ -73,18 +119,78 @@
     color: var(--accent-color);
   }
 }
+.contacts__link--bigger {
+  font-size: 34px;
+  line-height: 1.18;
+}
 .site-nav__link--active {
   position: relative;
   color: var(--accent-color);
-
-  &::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 5px;
-    bottom: 0;
-    left: 0;
-    border-radius: 2px;
-    background-color: var(--accent-color);
+  @media screen and (min-width: 768px) {
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 5px;
+      bottom: 0;
+      left: 0;
+      border-radius: 2px;
+      background-color: var(--accent-color);
+    }
   }
+}
+
+.menu-toggle {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+  width: 100vw;
+  height: 100vh;
+  padding: 48px 40px;
+  transform: translateX(100%);
+  transition: transform 250ms var(--cubic);
+  .menu-toggle {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+  }
+}
+.menu-container.is-open {
+  transform: translateX(0);
+}
+.mobile-header-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.mobile-networks {
+  display: flex;
+  margin-top: 64px;
+}
+.mobile-networks__link {
+  position: relative;
+  color: var(--accent-color);
+  letter-spacing: 0.02em;
+  font-weight: 500;
+  line-height: 1.14;
+}
+.mobile-networks__item:not(:last-child) {
+  margin-right: 10px;
+  padding-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
