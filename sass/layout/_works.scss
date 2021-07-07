@@ -1,7 +1,5 @@
 .works {
   @media screen and (min-width: 768px) {
-  }
-  @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
     margin-right: -30px;
@@ -9,6 +7,9 @@
   }
 }
 .works__item {
+  @media screen and (min-width: 320px) {
+    min-width: 300px;
+  }
   @media screen and (max-width: 767px) {
     &:not(:last-child) {
       margin-bottom: 30px;
@@ -28,7 +29,9 @@
   border: 1px solid var(--works-line-color);
 }
 .works__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   transition: box-shadow 250ms var(--cubic);
   &:hover,
   &:focus {
@@ -58,17 +61,25 @@
 }
 
 .overflow__text {
+  @media screen and (min-width: 320px) {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  @media screen and (min-width: 480px) {
+    font-size: 18px;
+    line-height: 1.56;
+  }
   padding: 24px;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 18px;
-  line-height: 1.56;
+
   color: var(--primary-white-color);
 }
 
 .card-thumb {
   padding: 20px 24px;
+  flex-grow: 1;
 }
 .works__title {
   font-size: 18px;
