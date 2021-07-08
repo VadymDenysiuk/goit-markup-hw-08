@@ -462,6 +462,7 @@ body {
   margin-right: auto;
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero-1x-min.jpg);
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-1x-min.jpg);
   background-color: var(--secondary-bg-color);
@@ -479,9 +480,6 @@ body {
 @media screen and (min-width: 480px) {
   .hero {
     max-width: 768px;
-    /* height: 400px;
-    padding-top: 118px;
-    padding-bottom: 118px; */
   }
 }
 
