@@ -127,6 +127,7 @@
   }
 }
 .contacts__link--bigger {
+  color: var(--accent-color);
   @media screen and (min-width: 320px) {
     font-size: 26px;
     line-height: 1.16;
